@@ -10,9 +10,11 @@ public class LibraryCatalog {
     }
 
     public String searchBook(int index){
-        if(index < 0 || index >= bookTitles.length){
-            throw new ArrayIndexOutOfBoundsException("Invalid index");
+        try {
+            return bookTitles[index];
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Invalid index");
+            return null;
         }
-        return bookTitles[index];
     }
 }
