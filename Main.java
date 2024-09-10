@@ -4,10 +4,11 @@ public class Main {
     public static void main(String[] args) {
         String[] books = {"The Heiress", "Don't Want You Like a Best Friend", "The Atlas Complex", "The Fury", "Come and Get It"};
 
-        String title = null;
         LibraryCatalog catalog = new LibraryCatalog(books);
          Scanner scan = new Scanner(System.in);
         int input = -1;
+        String title = null;
+
         while (input == -1 || title == null) {
             input = inputValidator(scan);
             if(input != -1) {
